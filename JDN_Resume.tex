@@ -1,0 +1,164 @@
+%-------------------------
+% Resume in Latex
+% Author : Jeffrey D Nelson
+% Website: https://github.com/jdn5126/Resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}\vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeItemWithDate}[2]{
+  \item[]\small{
+    {#1}\hfill\textit{#2}\vspace{-6pt}
+  }
+}
+
+\newcommand{\companySubheading}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\roleSubheading}[2]{
+      \vspace{1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\textit{\small#1}} & \textbf{\textit{\small #2}} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{\textbullet}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Jeffrey D Nelson} & Email: {\textit{redacted}}\\
+  GitHub: \href{https://github.com/jdn5126}{\underline{jdn5126}} & Mobile: \textit{redacted} \\
+  Austin, TX\\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \companySubheading{Arista Networks}{Austin, TX}
+    \roleSubheading{Software Project Lead, Ethernet VPN Gateway Solutions}{March 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Architected and implemented network gateway solutions based on Ethernet VPN (EVPN), primarily for data center interconnect, where solutions drew from customer requirements/specifications and IETF standards.}
+        \resumeItem{Developed testing framework to improve and evaluate gateway solutions based on convergence time, memory utilization, hitless restart, and vendor interoperability. Utilized internal tooling along with popular industry tools, such as Valgrind, InfluxDB, and Telegraf.}
+        \resumeItem{Led a team of five to ten software engineers in implementing and testing solutions.}
+        \resumeItem{Worked with Solutions Engineers to develop and debug customer proof of concept networks (POCs).}
+        \resumeItem{Debugged and provided solutions for customer production and development networks experiencing issues; primarily related to VxLAN, BGP/EVPN gateways, and software-based forwarding.}
+      \resumeItemListEnd
+    \roleSubheading{Software Engineer, Network Virtualization Overlays}{November 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented customer requests for networking features related to virtualization overlays and software-defined networking.}
+        \resumeItem{Implemented and maintained software forwarding support for protocols such as Virtual Extensible LAN (VxLAN), Multiprotocol Label Switching (MPLS), and Ethernet OAM.}
+        \resumeItem{Developed, implemented, and maintained testing frameworks for validating solutions and evaluating performance.}
+        \resumeItem{Worked with technologies and frameworks such as Docker, OpenConfig, and OpenFlow.}
+      \resumeItemListEnd
+      
+    \companySubheading{IBM}{Austin, TX}
+    \roleSubheading{Logic Design Engineer, POWER Processor}{July 2016 - November 2017}
+      \resumeItemListStart
+        \resumeItem{Designed, implemented, and debugged POWER ISA microarchitecture in the Memory Management Unit, utilizing skills in RTL design and knowledge of processor architecture.}
+        \resumeItem{Validated and debugged POWER9 hardware implementation in Virtual Bringup Lab.}
+      \resumeItemListEnd
+      
+    \companySubheading{Intel Corporation}{King of Prussia, PA}
+    \roleSubheading{System Validation Intern, HPC Solutions}{May - August 2015}
+      \resumeItemListStart
+        \resumeItem{Developed, executed, and debugged compute cluster validation plans for HPC products.}
+        \resumeItem{Automated existing test content with Python test framework and worked with developer operations team to integrate workflow with Jira and Jenkins.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{The University of Texas at Austin} & Austin, TX \\
+      \textit{\small M.S. in Electrical and Computer Engineering; GPA: 3.97} & \textit{\small 2018 -- 2021} \\
+      Relevant Papers: \textit{\small \href{https://github.com/jdn5126/Resume/blob/main/Speculative-Messages.pdf}{\underline{Speculative Messages}},
+      \href{https://github.com/jdn5126/Resume/blob/main/Community-Segmentation.pdf}{\underline{Community Segmentation}},
+      \href{https://github.com/jdn5126/Resume/blob/main/BarnesHutModel.pdf}{\underline{Parallel Barnes-Hut}}} \\
+    \end{tabular*}\vspace{-5pt}
+
+    \vspace{0pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{The Pennsylvania State University} & University Park, PA \\
+      \textit{\small B.S. in Computer Engineering; GPA: 3.86} & \textit{\small 2012 -- 2016} \\
+      \textit{\small Minor in Information Sciences and Technology} & \textit{\small 2014 -- 2016} \\
+    \end{tabular*}\vspace{-5pt}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Languages}
+ \resumeSubHeadingListStart
+   \item[]{
+     \textbf{Proficient:}{ C++, C, Java, Python, Bash}
+     \hfill
+     \textbf{Familiar:}{ Golang, SQL, VHDL, Verilog }
+   }
+ \resumeSubHeadingListEnd
+ 
+\section{Activities}
+ \resumeSubHeadingListStart
+    \resumeItemWithDate{\textbf{Penn State Dance Marathon} - Technology Captain}{2015-2016}
+    \resumeItemWithDate{\textbf{Penn State Association of Computing Machinery} - 1st Place, CodePSU Competition}{2016}
+ \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
