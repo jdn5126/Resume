@@ -49,7 +49,7 @@
 }
 
 \newcommand{\companySubheading}[2]{
-  \vspace{-1pt}\item[]
+  \vspace{0pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
     \end{tabular*}\vspace{0pt}
@@ -84,7 +84,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jeffrey D Nelson} & Email: {\textit{redacted}}\\
+  \textbf{\Large Jeffrey D Nelson} & Email: \textit{redacted}\\
   GitHub: \href{https://github.com/jdn5126}{\underline{jdn5126}} & Mobile: \textit{redacted} \\
   Austin, TX\\
 \end{tabular*}
@@ -93,19 +93,19 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \companySubheading{Arista Networks}{Austin, TX}
-    \roleSubheading{Software Project Lead, Ethernet VPN Gateway Solutions}{March 2021 - Present}
+    \roleSubheading{Software Project Lead, Ethernet VPN Gateway Solutions}{February 2021 - Present}
       \resumeItemListStart
-        \resumeItem{Architected and implemented network gateway solutions based on Ethernet VPN (EVPN), primarily for data center interconnect, where solutions drew from customer requirements/specifications and IETF standards.}
-        \resumeItem{Developed testing framework to improve and evaluate gateway solutions based on convergence time, memory utilization, hitless restart, and vendor interoperability. Utilized internal tooling along with popular industry tools, such as Valgrind, InfluxDB, and Telegraf.}
-        \resumeItem{Led a team of five to ten software engineers in implementing and testing solutions.}
-        \resumeItem{Worked with Solutions Engineers to develop and debug customer proof of concept networks (POCs).}
-        \resumeItem{Debugged and provided solutions for customer production and development networks experiencing issues; primarily related to VxLAN, BGP/EVPN gateways, and software-based forwarding.}
+        \resumeItem{Led a team of software engineers in architecting, implementing, and testing network gateway solutions based on Ethernet VPN (EVPN), primarily for data center interconnect; solutions drew from customer requirements and IETF standards.}
+        \resumeItem{Developed testing framework to improve and evaluate gateway solutions based on convergence time, memory utilization, hitless restart, and vendor interoperability; utilized internal tooling along with industry tools such as Valgrind, InfluxDB, and Telegraf.}
+        \resumeItem{Worked with Solutions Engineers to develop and debug customer proof of concept networks.}
+        \resumeItem{Debugged and provided solutions for customer production and development networks experiencing issues primarily related to VxLAN, BGP/EVPN gateways, and software-based forwarding.}
       \resumeItemListEnd
-    \roleSubheading{Software Engineer, Network Virtualization Overlays}{November 2017 - Present}
+    \roleSubheading{Software Engineer, Network Virtualization Overlays}{November 2017 - February 2021}
       \resumeItemListStart
         \resumeItem{Designed and implemented customer requests for networking features related to virtualization overlays and software-defined networking.}
         \resumeItem{Implemented and maintained software forwarding support for protocols such as Virtual Extensible LAN (VxLAN), Multiprotocol Label Switching (MPLS), and Ethernet OAM.}
-        \resumeItem{Developed, implemented, and maintained testing frameworks for validating solutions and evaluating performance.}
+        \resumeItem{Refactored VxLAN programming pipeline to decrease memory usage by 5x, primarily through use of a shared memory model.}
+        \resumeItem{Developed, implemented, and maintained testing frameworks for validation and evaluation of features.}
         \resumeItem{Worked with technologies and frameworks such as Docker, OpenConfig, and OpenFlow.}
       \resumeItemListEnd
       
@@ -130,7 +130,7 @@
     \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{The University of Texas at Austin} & Austin, TX \\
-      \textit{\small M.S. in Electrical and Computer Engineering; GPA: 3.97} & \textit{\small 2018 -- 2021} \\
+      \textit{\small M.S. in Electrical and Computer Engineering; GPA: 3.96} & \textit{\small 2018 -- 2021} \\
       Relevant Papers: \textit{\small \href{https://github.com/jdn5126/Resume/blob/main/Speculative-Messages.pdf}{\underline{Speculative Messages}},
       \href{https://github.com/jdn5126/Resume/blob/main/Community-Segmentation.pdf}{\underline{Community Segmentation}},
       \href{https://github.com/jdn5126/Resume/blob/main/BarnesHutModel.pdf}{\underline{Parallel Barnes-Hut}}} \\
