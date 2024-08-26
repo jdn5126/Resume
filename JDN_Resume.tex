@@ -56,7 +56,7 @@
 }
 
 \newcommand{\roleSubheading}[2]{
-      \vspace{1pt}
+    \vspace{1pt}
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{\textit{\small#1}} & \textbf{\textit{\small #2}} \\
     \end{tabular*}\vspace{-8pt}
@@ -83,17 +83,29 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jeffrey D. Nelson} & Email: \textit{redacted}\\
-  GitHub: \href{https://github.com/jdn5126}{\underline{jdn5126}} & Mobile: \textit{redacted} \\
-  Austin, TX\\
-\end{tabular*}
+\centering{\textbf{\Huge Jeffrey D. Nelson} \\
+Email: \textit{Redacted} \textbar{} Mobile: \textit{Redacted} \textbar{} GitHub: \href{https://github.com/jdn5126}{\underline{jdn5126}}} \\
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+    \companySubheading{Amazon Web Services}{Austin, TX}
+    \roleSubheading{Software Development Engineer, Tools as a Service (TaaS)}{Mar 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Led design and development of script execution engine leveraging Typescript and AWS CDK. Implemented regional fail over to improve redundancy and EC2 auto-scaling to improve scalability.}
+        \resumeItem{Designed and implemented strict authentication/authorization model for access to service resources in corporate network. Documented and presented service threat model, service monitoring strategy, and penetration testing strategy.}
+        \resumeItem{Maintained and provided operational support for three web services deployed on AWS as part of oncall responsibilities.}
+      \resumeItemListEnd
+    \roleSubheading{Software Development Engineer, Elastic Kubernetes Service (EKS)}{Aug 2022 -- Mar 2024}
+      \resumeItemListStart
+        \resumeItem{Developed features for the Amazon Virtual Private Cloud (VPC) Container Networking Interface (CNI), including IPv6 Security Groups for Pods, iptables-nft support, and more.}
+        \resumeItem{Led maintenance effort and long-term design decisions for the AWS VPC CNI.}
+        \resumeItem{Led effort to improve VPC CNI scalability, specifically decreasing the number of API server calls by 10x, decreasing EC2 API calls by a factor of N, and decreasing application memory consumption by 2x.}
+        \resumeItem{Developed and maintained operational pipelines across the EKS ecosystem, focused on continuous delivery, observability, and security.}
+        \resumeItem{Debugged and provided support during customer oncall escalations, helping customers recover from outages, detect issues, and increase availability and reliability.}
+      \resumeItemListEnd
     \companySubheading{Arista Networks}{Austin, TX}
-    \roleSubheading{Software Project Lead, Network Gateway Solutions}{Feb 2021 -- Present}
+    \roleSubheading{Software Project Lead, Network Gateway Solutions}{Feb 2021 -- Aug 2022}
       \resumeItemListStart
         \resumeItem{Led a team of software engineers in architecting, implementing, and testing network gateway solutions based on Border Gateway Protocol (BGP). Solutions drew from customer requirements and IETF standards and were primarily geared toward data center interconnect.}
         \resumeItem{Developed testing framework to improve and evaluate gateway solutions based on convergence time, memory utilization, hitless restart, and vendor interoperability; utilized internal tooling along with industry tools including Valgrind, InfluxDB, and Telegraf.}
@@ -109,21 +121,23 @@
         \resumeItem{Developed, implemented, and maintained testing frameworks for validation and evaluation of features.}
         \resumeItem{Worked with technologies and frameworks such as Docker, OpenConfig, and OpenFlow.}
       \resumeItemListEnd
-      
     \companySubheading{IBM}{Austin, TX}
     \roleSubheading{Logic Design Engineer, POWER Processor}{July 2016 -- Nov 2017}
       \resumeItemListStart
         \resumeItem{Designed, implemented, and debugged POWER ISA microarchitecture in the Memory Management Unit, utilizing skills in RTL design and knowledge of processor architecture.}
         \resumeItem{Validated and debugged POWER9 hardware implementation in Virtual Bringup Lab. Developed tooling to automate validation and debugging of ISA implementation.}
       \resumeItemListEnd
-      
-    \companySubheading{Intel Corporation}{King of Prussia, PA}
-    \roleSubheading{System Validation Intern, HPC Solutions}{May - Aug 2015}
-      \resumeItemListStart
-        \resumeItem{Developed, executed, and debugged compute cluster validation plans for HPC products.}
-        \resumeItem{Automated existing test content with Python test framework and worked with developer operations team to integrate workflow with Jira and Jenkins.}
-      \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%--------VOLUNTEERING------------------
+\section{Community Service}
+  \resumeSubHeadingListStart
+    \companySubheading{Austin ISD Victory Tutoring}{Austin, TX}
+      \roleSubheading{Volunteer Tutor}{Jan 2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Tutored and assisted students in grades 2 through 12 with homework and test preparation.}
+        \resumeItemListEnd
+ \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -131,7 +145,7 @@
     \vspace{0pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{The University of Texas at Austin} & Austin, TX \\
-      \textit{\small M.S. in Electrical and Computer Engineering; GPA: 3.96} & \textbf{\textit{\small Aug 2018 -- Dec 2021}} \\
+      \textit{\small M.S. in Electrical and Computer Engineering} & \textbf{\textit{\small Aug 2018 -- Dec 2021}} \\
       Relevant Papers: \textit{\small \href{https://github.com/jdn5126/Resume/blob/main/Speculative-Messages.pdf}{\underline{Speculative Messages}},
       \href{https://github.com/jdn5126/Resume/blob/main/Community-Segmentation.pdf}{\underline{Community Segmentation}},
       \href{https://github.com/jdn5126/Resume/blob/main/BarnesHutModel.pdf}{\underline{Parallel Barnes-Hut}}} \\
@@ -140,26 +154,19 @@
     \vspace{0pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{The Pennsylvania State University} & University Park, PA \\
-      \textit{\small B.S. in Computer Engineering; GPA: 3.86} & \textbf{\textit{\small Aug 2012 -- May 2016}} \\
+      \textit{\small B.S. in Computer Engineering} & \textbf{\textit{\small Aug 2012 -- May 2016}} \\
       \textit{\small Minor in Information Sciences and Technology} \\
     \end{tabular*}\vspace{-5pt}
   \resumeSubHeadingListEnd
 
-%
 %--------PROGRAMMING SKILLS------------
-\section{Programming Languages}
- \resumeSubHeadingListStart
-   \item[]{
-     \textbf{Proficient:}{ C++, C, Java, Python, Bash}
-     \hfill
-     \textbf{Familiar:}{ Golang, SQL, VHDL, Verilog }
-   }
- \resumeSubHeadingListEnd
- 
-\section{Activities}
- \resumeSubHeadingListStart
-    \resumeItemWithDate{\textbf{Penn State Dance Marathon} - Technology Captain}{\textbf{May 2015 -- Aug 2016}}
-    \resumeItemWithDate{\textbf{Penn State Association of Computing Machinery} - 1st Place, CodePSU Competition}{\textbf{Mar 2016}}
- \resumeSubHeadingListEnd
-%-------------------------------------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \item[]{
+      \textbf{Languages: }{Golang, C++, C, Java, Python, Typescript, Bash}
+    }
+    \item[]{
+      \textbf{Frameworks/Expertise: }{Kubernetes, Cloud Networking, AWS CDK, NodeJS}
+    }
+  \resumeSubHeadingListEnd
 \end{document}
